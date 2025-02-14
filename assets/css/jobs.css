@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,40..300&display=swap');
+
 :root{
     --violet:#5964E0;
     --light-violet:#939BF4;
@@ -11,9 +13,11 @@
 
 body[data-theme="light"]{
     --bg-color:var(--light-grey);
+    --fg-color:var(--white);
 }
 body[data-theme="dark"]{
     --bg-color:var(--very-dark-blue);
+    --fg-color:var(--midnight);
 }
 
 *{
@@ -23,6 +27,7 @@ box-sizing: border-box;
 }
 body{
     background-color: var(--bg-color);
+    font-family: "Kumbh Sans", serif;
 }
 .container{
     max-width: 1160px;
@@ -33,7 +38,7 @@ body{
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
-    padding:36px 24px ;
+    padding:36px 24px 76px ;
 }
 .theme-btn-container{
     display: flex;
@@ -71,4 +76,37 @@ body{
   #theme-label:has(input:checked)::after{
     transform: translateX(12px);
   }
-  
+  .search-container{
+    padding-inline: 24px;
+  }
+  .search-input{
+    background-color: var(--fg-color);
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    position: absolute;
+    top: 96px;
+    
+    input{
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19.84px;
+        background-color: var(--fg-color);
+        border: none;
+    }
+    .search-button{
+        display: flex;
+        gap: 24px;
+        .filter-btn{
+            background-color: transparent;
+            border: none;
+        }
+        .search-btn{
+            padding: 14px;
+            background-color: var(--violet);
+            border: none;
+            border-radius: 5px;
+        }
+    }
+  }
