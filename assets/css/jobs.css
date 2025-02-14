@@ -38,7 +38,7 @@ body{
     margin-inline: auto;
 }
 .header{
-    background-image: url('/assets/img/Triangle.png');
+    background-image: url('/assets/img/Triangle\ \(1\).png');
     background-repeat: no-repeat;
     display: flex;
     justify-content: space-between;
@@ -121,6 +121,8 @@ body{
     border-radius: 6px;
     margin-inline: 24px;
     position: relative;
+    margin-bottom: 49px;
+    width: 100%;
     .company-info{
         padding: 49px 9px 32px 32px;
     }
@@ -149,5 +151,19 @@ body{
         line-height: 17.36px;
         color: var(--country-text);
         margin-top: 28px;
+    }
+  }
+  @media(width > 768px){
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 11px;
+    }
+  }
+  @media(width > 1200px){
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
     }
   }
